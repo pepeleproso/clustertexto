@@ -31,5 +31,11 @@ class InputDataSetCSV(object):
             self.end = len(self.dataset)
 
     def _obtenerDataSet(self):
-        csv_file = pd.read_csv(self.inputFilename, header=0, sep=',', quotechar='\"', encoding="utf-8")
+        #csv_file = pd.read_csv(self.inputFilename, header=0, sep=',', quotechar='\"', encoding="utf-8")
+        csv_file = pd.read_excel (self.inputFilename, sheet_name='Mensajes')
         return csv_file.values.tolist()
+
+    def _obtenerDF(self):
+        #csv_file = pd.read_csv(self.inputFilename, header=0, sep=',', quotechar='\"', encoding="utf-8")
+        csv_file = pd.read_excel (self.inputFilename, sheet_name='Mensajes')
+        return csv_file
