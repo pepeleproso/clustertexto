@@ -1,6 +1,5 @@
 import pandas as pd
 from TextCleaner import CleanText
-from LemmaTokenizer import convert_text_to_tokens
 
 class Corpus(object):
     def __init__(self, nombreArchivoEntrada, sheet):
